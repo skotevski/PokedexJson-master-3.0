@@ -27,9 +27,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonH
     private List<String> mPokemonList;
 
     // sample constructor?
-    public PokemonAdapter() {
-        mPokemonList = Arrays.asList("");
-    }
+//    public PokemonAdapter() {
+//        mPokemonList = Arrays.asList("");
+//    }
 
     public PokemonAdapter(List<String> pokemonList) {
 
@@ -61,6 +61,30 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonH
         TextView weightTextView = pokemonHolder.pokemonWeightTextView;
         weightTextView.setText(pokemon);
 
+        TextView typeTextView = pokemonHolder.pokemonTypeTextView;
+        typeTextView.setText(pokemon);
+
+        TextView hpTextView = pokemonHolder.pokemonHpTextView;
+        hpTextView.setText(pokemon);
+
+        TextView attackTextView = pokemonHolder.pokemonAttackTextView;
+        attackTextView.setText(pokemon);
+
+
+        TextView defenseTextView = pokemonHolder.pokemonDefenseTextView;
+        defenseTextView.setText(pokemon);
+
+        TextView specialattackTextView = pokemonHolder.pokemonSpecialAttackTextView;
+        specialattackTextView.setText(pokemon);
+
+        TextView specialdefenseTextView = pokemonHolder.pokemonSpecialDefenseTextView;
+        specialdefenseTextView.setText(pokemon);
+
+        TextView speedTextView = pokemonHolder.pokemonSpeedTextView;
+        speedTextView.setText(pokemon);
+
+
+
     }
 
     @Override
@@ -72,6 +96,16 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonH
         public TextView pokemonNameTextView;
         public TextView pokemonHeightTextView;
         public TextView pokemonWeightTextView;
+
+        public TextView pokemonTypeTextView;
+        public TextView pokemonHpTextView;
+        public TextView pokemonAttackTextView;
+        public TextView pokemonDefenseTextView;
+        public TextView pokemonSpecialAttackTextView;
+        public TextView pokemonSpecialDefenseTextView;
+        public TextView pokemonSpeedTextView;
+
+
         public ImageView pokemonImageView;
 
         public PokemonHolder(View itemView) {
@@ -80,6 +114,15 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonH
             pokemonHeightTextView = (TextView)itemView.findViewById(R.id.pokemon_height);
             pokemonWeightTextView = (TextView)itemView.findViewById(R.id.pokemon_weight);
             pokemonImageView = (ImageView)itemView.findViewById(R.id.pokemon_photo);
+            pokemonTypeTextView = (TextView)itemView.findViewById(R.id.pokemon_type);
+            pokemonHpTextView = (TextView)itemView.findViewById(R.id.pokemon_hp);
+            pokemonAttackTextView = (TextView)itemView.findViewById(R.id.pokemon_attack);
+            pokemonDefenseTextView = (TextView)itemView.findViewById(R.id.pokemon_defense);
+            pokemonSpecialAttackTextView = (TextView)itemView.findViewById(R.id.pokemon_specialattack);
+            pokemonSpecialDefenseTextView = (TextView)itemView.findViewById(R.id.pokemon_specialdefense);
+            pokemonSpeedTextView = (TextView)itemView.findViewById(R.id.pokemon_speed);
+
+
             itemView.setOnClickListener(this);
         }
 

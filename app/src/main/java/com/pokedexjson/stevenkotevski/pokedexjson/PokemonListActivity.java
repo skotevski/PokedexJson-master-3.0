@@ -22,8 +22,16 @@ public class PokemonListActivity extends AppCompatActivity {
         List<String> pokemonList = new ArrayList<>();
 
         pokemonList.add("pikachu");
-        pokemonList.add("salamance");
+        pokemonList.add("salamence");
         pokemonList.add("mewtwo");
+        pokemonList.add("charizard");
+        pokemonList.add("blaziken");
+        pokemonList.add("rayquaza");
+        pokemonList.add("dialga");
+        pokemonList.add("sceptile");
+        pokemonList.add("empoleon");
+        pokemonList.add("flygon");
+
 
         // Maybe using the wrong variables here...
 

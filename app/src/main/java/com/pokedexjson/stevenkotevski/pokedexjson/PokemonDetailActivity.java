@@ -12,6 +12,7 @@ import com.pokedexjson.stevenkotevski.pokedexjson.networking.GetPokemonDataServi
 import com.pokedexjson.stevenkotevski.pokedexjson.networking.PokemonClientReference;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.*;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,6 +23,16 @@ public class PokemonDetailActivity extends AppCompatActivity {
     private TextView mNameTextView;
     private TextView mHeightTextView;
     private TextView mWeightTextView;
+
+    private TextView mTypeTextView;
+    private TextView mHpTextView;
+    private TextView mAttackTextView;
+    private TextView mDefenseTextView;
+    private TextView mSpecialAttackTextView;
+    private TextView mSpecialDefenseTextView;
+    private TextView mSpeedTextView;
+
+
     private ImageView mImageView;
 
     @Override
@@ -34,6 +45,15 @@ public class PokemonDetailActivity extends AppCompatActivity {
         mNameTextView = (TextView)findViewById(R.id.pokemon_name);
         mHeightTextView = (TextView)findViewById(R.id.pokemon_height);
         mWeightTextView = (TextView)findViewById(R.id.pokemon_weight);
+
+        mTypeTextView = (TextView)findViewById(R.id.pokemon_type);
+        mHpTextView = (TextView)findViewById(R.id.pokemon_hp);
+        mAttackTextView = (TextView)findViewById(R.id.pokemon_attack);
+        mDefenseTextView = (TextView)findViewById(R.id.pokemon_defense);
+        mSpecialAttackTextView = (TextView)findViewById(R.id.pokemon_specialattack);
+        mSpecialDefenseTextView = (TextView)findViewById(R.id.pokemon_specialdefense);
+        mSpeedTextView = (TextView)findViewById(R.id.pokemon_speed);
+
         mImageView = (ImageView)findViewById(R.id.pokemon_photo);
 
 
@@ -53,6 +73,13 @@ public class PokemonDetailActivity extends AppCompatActivity {
                 mNameTextView.setText("Name: " + pokemon.name);
                 mHeightTextView.setText("Height: " + pokemon.height);
                 mWeightTextView.setText("Weight: " + pokemon.weight);
+                mTypeTextView.setText("Type: " + pokemon.type);
+                mHpTextView.setText("HP: " + pokemon.hp);
+                mAttackTextView.setText("Attack: " + pokemon.attack);
+                mDefenseTextView.setText("Defense: " + pokemon.defense);
+                mSpecialAttackTextView.setText("Special Attack: " + pokemon.specialattack);
+                mSpecialDefenseTextView.setText("Special Defense: " + pokemon.specialdefense);;
+                mSpeedTextView.setText("Speed: " + pokemon.speed);
             }
 
             @Override
